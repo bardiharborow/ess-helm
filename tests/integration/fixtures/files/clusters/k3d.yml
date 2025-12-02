@@ -34,6 +34,10 @@ options:
       nodeFilters: [servers:*]
     - arg: "--kube-apiserver-arg=audit-policy-file=/etc/kubernetes/policies/audit-policy.yaml"
       nodeFilters: [servers:*]
+    - arg: "--cluster-cidr=2001:db8:42::/56"
+      nodeFilters: [ servers:* ]
+    - arg: "--service-cidr=2001:db8:43::/112"
+      nodeFilters: [ servers:* ]
   runtime:
     ulimits:
     - name: nofile
